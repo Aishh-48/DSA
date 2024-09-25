@@ -1,5 +1,5 @@
-#include <stdio .h>
-#include <stdlib. h>
+#include <stdio.h>
+#include <stdlib h>
 #include <string.h>
 struct Node {
 char name [50];
@@ -29,14 +29,14 @@ int n;
 char name [50];
 struct Node* head = NULL;
 struct Node* temp = NULL;
-printf(""Enter the number of contacts: ") ;
+printf("Enter the number of contacts: ") ;
 scanf ("%d", &n);
 getchar ();
 for (int i = 0; i<n; i++) {
 printf("Enter contact name %d: ", i + 1);
 fgets (name, 50, stdin);
 name[strcspn (name, "\n")] = 0;
-struct Node* newNode = createNode (name):
+struct Node* newNode = createNode (name);
 
 if (head = NULL) {
 head = newNode;
@@ -45,7 +45,7 @@ temp->next = newNode;
 }
 temp = newNode; 
 }
-displayList (head) ;
+displayList(head) ;
 return head;
 }
 struct Node* insertContact (struct Node* head) {
@@ -72,7 +72,7 @@ printf("Invalid position . \n");
 free (newNode) ;
 return head;
 }
-newNode->next = temp- > next;
+newNode->next = temp-> next;
 temp->next = newNode;
 }
 displayList (head) ;
@@ -106,12 +106,12 @@ return head;
 if (prev == NULL) {
 head = temp->next;
 } else {
-prev->next = temp- >next;
+prev->next = temp->next;
 }
 free (temp);
 } else if (choice == 'p') {
 printf("Enter the position to delete the contact: ");
-Scanf("%d", &pos);
+scanf("%d", &pos);
 
 if (pos == 0) {
 struct Node* temp = head;
@@ -148,7 +148,7 @@ getchar();
 fgets (name, 50, stdin) ;
 name [strcspn (name, "\n") ] = 0;
 while (temp != NULL) {
-if (strcmp (temp- >name, name) == 0) {
+if (strcmp (temp->name, name) == 0) {
 printf("%s found at position %d\n", name, pos);
 return;
 }
@@ -189,7 +189,7 @@ case 6:
 printf("Exiting the program. . . \n");
 break;
 default:
-printf("" Invalid choice. Please try again.\n");
+printf(" Invalid choice. Please try again.\n");
 }
 } while (choice != 6);
 return 0;
